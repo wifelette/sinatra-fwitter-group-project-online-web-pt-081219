@@ -9,7 +9,7 @@ class CreateTables < ActiveRecord::Migration[5.2]
     end
 
     create_table :tweets do |t|
-      t.string :contents
+      t.string :content
       t.integer :user_id
     end
   end
