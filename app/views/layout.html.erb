@@ -6,6 +6,13 @@
 </head>
 
 <body>
+<!-- Created a navigational "bar" at the top of every page that renders the appropriate actions -->
+<!-- depending upon if the user is logged in or not -->
+<% if logged_in? %>
+  <a href="/logout">Logout</a>
+<% else %>
+  <p><a href="/login">Login</a> or <a href="/signup">Signup</a></p>
+<% end %>
 
   <div class="container">
     <h1>Welcome to Fwitter!</h1>
@@ -13,7 +20,6 @@
 
     <%= yield %>
 
-    <a href="/logout">Logout</a>
   </div>
 
 </body>
