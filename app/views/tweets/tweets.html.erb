@@ -1,5 +1,7 @@
-<h1>Welcome, <%= current_user.username %>!</h1>
+<h1>Welcome, <%= current_user.username.capitalize %>!</h1>
 <br />
 <% @tweets.each do |tweet| %>
+    <hr>
     <p><%= tweet.content %></p>
+    <p>by: <%= @users.find(tweet.user_id).username %></p>
 <% end %>

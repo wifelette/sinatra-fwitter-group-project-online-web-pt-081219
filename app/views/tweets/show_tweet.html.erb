@@ -1,1 +1,2 @@
-SHOW TWEETS Page
+<p><%= @tweet.content %></p>
+<p>by: <%= @users.find(@tweet.user_id).username %></p>
