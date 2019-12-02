@@ -50,6 +50,12 @@ class UsersController < ApplicationController
     erb :"tweets/tweets"
   end
 
+  get '/users/:slug' do
+    @user = User.find_by_slug(params[:slug])
+    @tweets = Tweet.all
+    erb :'users/show'
+  end
+
   get '/logout' do
     if logged_in?
       session.destroy

@@ -4,7 +4,7 @@ module Slugifiable
   extend ActiveSupport::Concern
 
   def slug
-    name.downcase.gsub(' ', '-')
+    username.downcase.gsub(' ', '-')
   end
 
   class_methods do
